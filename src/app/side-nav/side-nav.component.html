@@ -1,0 +1,12 @@
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="true" [disableClose]="true">
+      <a mat-button routerLink="/users">
+        <mat-icon>favorite</mat-icon>
+        Login
+      </a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

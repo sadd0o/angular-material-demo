@@ -1,0 +1,129 @@
+<div class="container-fluid padding-top-bottom-20">
+  <div class="row">
+
+    <!--  Left Section of Table and card Section Starts  -->
+    <div class="col-md-10">
+
+      <div class="row">
+        <!--  Table Code Starts  -->
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="first_name">
+          <th mat-header-cell *matHeaderCellDef>First Name</th>
+          <td mat-cell *matCellDef="let user">{{ user.first_name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="last_name">
+          <th mat-header-cell *matHeaderCellDef>Last Name</th>
+          <td mat-cell *matCellDef="let user">{{ user.last_name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef>Avatar</th>
+          <td mat-cell *matCellDef="let user"><img [src]="user.avatar" class="avatar-round" alt="Avatar" width="40" height="40"></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator #paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons (pageSizeChange)="onPageSizeChange($event)" [length]="totalLength" (page)="onPageChange($event)"></mat-paginator>
+      <!--  Table Code Ends  -->
+      </div>
+
+
+      <!-- Card list section Starts -->
+      <div class="row m-top-50">
+        <div class="col-md-4">
+          <mat-card class="example-card">
+            <img mat-card-image src="../../assets/images/small-world-money-transfer-blue.webp" alt="SmallWorld">
+            <mat-card-header>
+              <mat-card-title>Header</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis enim et lacinia tincidunt.
+                Vivamus quis tincidunt augue, sed consectetur dolor. In sem tortor, tempor et urna non, laoreet ullamcorper orci.
+                Cras vehicula ornare ex vitae facilisis. Donec eu felis bibendum, vestibulum risus sit amet, sodales arcu.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-4">
+          <mat-card class="example-card">
+            <img mat-card-image src="../../assets/images/small-world-money-transfer-blue.webp" alt="SmallWorld">
+            <mat-card-header>
+              <mat-card-title>Header</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis enim et lacinia tincidunt.
+                Vivamus quis tincidunt augue, sed consectetur dolor. In sem tortor, tempor et urna non, laoreet ullamcorper orci.
+                Cras vehicula ornare ex vitae facilisis. Donec eu felis bibendum, vestibulum risus sit amet, sodales arcu.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-4">
+          <mat-card class="example-card">
+            <img mat-card-image src="../../assets/images/small-world-money-transfer-blue.webp" alt="SmallWorld">
+            <mat-card-header>
+              <mat-card-title>Header</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis enim et lacinia tincidunt.
+                Vivamus quis tincidunt augue, sed consectetur dolor. In sem tortor, tempor et urna non, laoreet ullamcorper orci.
+                Cras vehicula ornare ex vitae facilisis. Donec eu felis bibendum, vestibulum risus sit amet, sodales arcu.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <!-- Card list section Ends -->
+    </div>
+    <!--  Left Section of Table and card Section Ends  -->
+
+
+    <!--  Right Section including Search Text Etc Starts  -->
+    <div class="col-md-2">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Phase Results</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list role="list">
+            <mat-list-item role="listitem" class="list-item-wrap">
+              <span matListItemTitle>Phase #1 Results:</span>
+              <span matListItemLine>6</span>
+            </mat-list-item>
+            <mat-list-item role="listitem" class="list-item-wrap">
+              <span matListItemTitle>Phase #2 Results:</span>
+              <span matListItemLine>19</span>
+            </mat-list-item>
+            <mat-list-item role="listitem" class="list-item-wrap">
+              <span matListItemTitle>Phase #3 Results:</span>
+              <span matListItemLine>3</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-form-field class="txt-search">
+        <mat-icon matSuffix>search</mat-icon>
+        <input matInput placeholder="Search">
+      </mat-form-field>
+    </div>
+    <!--  Right Section including Search Text Etc Starts  -->
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.padding-top-bottom-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.txt-search {
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+.list-item-wrap span {
+  display: inline-block !important;
+}
+
+.list-item-wrap span:nth-child(2) {
+  float: right !important;
+  margin-top: 7px;
+}
+
+
+.m-top-50 {
+  margin-top: 50px;
+}
+
+.avatar-round {
+  border-radius: 50px;
+}

@@ -1,0 +1,32 @@
+
+
+<mat-toolbar>
+  <span>SmallWorld</span>
+</mat-toolbar>
+
+<div class="container-fluid">
+  <div class="row m-top-10">
+    <div class="float-end">
+        <div class="float-end">
+          <mat-form-field>
+            <mat-label>Agent Name *</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let agent of agents" [value]="agent.value">
+                {{agent.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="custom-space">
+            <mat-label>Country *</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let country of country" [value]="country.value">
+                {{country.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+    </div>
+
+  </div>
+</div>
